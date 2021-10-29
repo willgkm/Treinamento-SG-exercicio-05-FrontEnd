@@ -1,0 +1,23 @@
+<div class="jumbotron">
+  <div class="row">
+    <div class="col-12">
+      <h4>Cadastro de clientes Juridico</h4>
+    </div>
+  </div>
+
+  <form name="clienteJuridicoForm">
+    <div class="container">
+
+      <input class="form-control" type="text" ng-model="clienteJuridico.nome" placeholder="Nome..." ng-required="true"
+        ng-minlength="3">
+
+      <input class="form-control" type="text" ng-model="clienteJuridico.cnpj" placeholder="CNPJ..." ng-required="true"
+        ng-minlength="3">
+    </div>
+  </form>
+
+  <div class="button">
+    <button type="button" class="btn btn-info" ng-click="$ctrl.createLegalClient(clienteJuridico)">Cadastrar pessoa
+      Juridica</button>
+  </div>
+</div>

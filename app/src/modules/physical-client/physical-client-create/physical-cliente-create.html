@@ -1,0 +1,22 @@
+<div class="jumbotron">
+    <div class="row">
+        <div class="col-12">
+            <h4>Cadastro de clientes fisico</h4>
+        </div>
+    </div>
+
+    <form name="clienteFisicoForm">
+      <div class="container">
+
+          <input class="form-control" type="text" ng-model="clienteFisico.nome" placeholder="Nome..."
+              ng-required="true" ng-minlength="3">
+          
+          <input class="form-control" type="text" ng-model="clienteFisico.cpf" placeholder="CPF..."
+              ng-required="true" ng-minlength="3">
+      </div>
+  </form>
+
+    <div class="button">
+        <button type="button" class="btn btn-info" ng-click="$ctrl.createPhysiscalClient(clienteFisico)">Cadastrar pessoa fisisca</button>
+    </div>
+</div>
