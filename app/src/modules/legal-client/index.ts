@@ -5,7 +5,7 @@ import LegalClienteController from './legal-client-create/legal-cliente-create'
 
 // import AccountService from ''
 
-const accountModule = angular.module('app.legalClient', [])
+const legalClientModule = angular.module('app.legalClient', [])
   // .service('accountService', AccountService)
   .config(['$stateProvider', ($stateProvider) => {
     // console.log($routeParams)
@@ -22,4 +22,4 @@ const accountModule = angular.module('app.legalClient', [])
       })
 
   }])
-export default accountModule
+export default legalClientModule

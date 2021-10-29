@@ -1,0 +1,19 @@
+<div class="jumbotron">
+    <div class="row">
+      <div class="col-12">
+        <h4>Criação de conta Pessoa Juridica</h4>
+      </div>
+    </div>
+  
+    <form name="contaFisicaForm">
+      <div class="container">
+  
+        <input class="form-control" type="text" ng-model="contaJuridica.contaJuridica.id" placeholder="Informe o ID..."
+          ng-required="true" >
+  
+    </form>
+  
+    <div class="button">
+      <button type="button" class="btn btn-info" ng-click="$ctrl.createLegalAccount(contaJuridica)">Criar conta Juridica</button>
+    </div>
+  </div>

@@ -14,7 +14,11 @@ angular.module('app', [
   'app.management',
   'app.physicalClient',
   'app.legalClient',
-  'app.physicalAccont'
+  'app.physicalAccount',
+  'app.legalAccount',
+  'app.savingAccount',
+  'app.moneyMovement'
+
 ])
 .component('baseComponents', baseComponents)
 .config(['$stateProvider', '$urlRouterProvider', ($stateProvider, $urlRouterProvider) => {

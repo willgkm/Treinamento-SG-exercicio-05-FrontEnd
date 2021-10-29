@@ -1,11 +1,14 @@
 import * as angular from 'angular'
 
 import physicalClientCreateTemplate from './physical-client-create/physical-cliente-create.html'
-import PhysicalClienteController from './physical-client-create/physical-cliente-create'
+import PhysicalClienteCreateController from './physical-client-create/physical-cliente-create'
+
+import physicalClientConsultTemplate from './physical-client-consult/physical-cliente-consult.html'
+import PhysicalClienteConsultController from './physical-client-consult/physical-cliente-consult'
 
 // import AccountService from ''
 
-const accountModule = angular.module('app.physicalClient', [])
+const physicalClientModule = angular.module('app.physicalClient', [])
   // .service('accountService', AccountService)
   .config(['$stateProvider', ($stateProvider) => {
     // console.log($routeParams)
@@ -17,9 +20,15 @@ const accountModule = angular.module('app.physicalClient', [])
       .state('app.physicalClient.create', {
         url: '/create',
         templateUrl: physicalClientCreateTemplate,
-        controller: PhysicalClienteController,
+        controller: PhysicalClienteCreateController,
+        controllerAs: '$ctrl',
+      })
+      .state('app.physicalClient.consult', {
+        url: '/consult',
+        templateUrl: physicalClientConsultTemplate,
+        controller: PhysicalClienteConsultController,
         controllerAs: '$ctrl',
       })
 
   }])
-export default accountModule
+export default physicalClientModule

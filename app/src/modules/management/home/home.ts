@@ -12,7 +12,7 @@ class homeController {
   private cards: object[] = [
     {
       image: 'https://media-exp1.licdn.com/dms/image/C561BAQG8jBJ-6Uw_2g/company-background_10000/0/1552568277311?e=2159024400&v=beta&t=leAN-aEQwoogMSo3h1UBJKGHDmxf6Sv9KTSZszxKzV8',
-      title: 'É hora de cuidar do que realmente importa',
+      title: 'Banco é o lugar onde você pode obter dinheiro emprestado, se provar que não precisa dele.',
       button: 'Veja mais',
     },{
       image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEm4nTVSQJFC_tFo0QC1CEUgFsxZCpSp7SUQ&usqp=CAU',

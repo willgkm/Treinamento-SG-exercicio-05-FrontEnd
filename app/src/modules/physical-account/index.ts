@@ -1,20 +1,21 @@
 import * as angular from 'angular'
 
-import physicalAccountCreateTemplate from './physical-accout-create/physical-account-create.html'
-import physicalAccountCreateController from './physical-accout-create/physical-account-create'
+import physicalAccountCreateTemplate from './physical-account-create/physical-account-create.html'
+import physicalAccountCreateController from './physical-account-create/physical-account-create'
+import accountModule from '../physical-client'
 
 // import AccountService from ''
 
-const accountModule = angular.module('app.physicalAccont', [])
+const physicalAccountModule = angular.module('app.physicalAccount', [])
   // .service('accountService', AccountService)
   .config(['$stateProvider', ($stateProvider) => {
     // console.log($routeParams)
     $stateProvider
-      .state('app.physicalAccont', {
+      .state('app.physicalAccount', {
         url: '^/physical-account',
         abstract: true,
       })
-      .state('app.physicalAccont.create', {
+      .state('app.physicalAccount.create', {
         url: '/create',
         templateUrl: physicalAccountCreateTemplate,
         controller: physicalAccountCreateController,
@@ -22,4 +23,4 @@ const accountModule = angular.module('app.physicalAccont', [])
       })
 
   }])
-export default accountModule
+export default physicalAccountModule
