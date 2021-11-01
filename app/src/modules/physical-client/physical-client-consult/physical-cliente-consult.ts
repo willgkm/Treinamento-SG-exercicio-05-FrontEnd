@@ -1,25 +1,36 @@
 import './physical-cliente-consult.scss'
 
-class physicalClientController {
+
+class physicalClientCreateController {
+  
+
+  private pessoasFisicas: object[] = [
+
+  ]
 
   constructor(
     public $scope,
     public $state,
     public $interval,
+    public physicalClientService,
   ) { }
 
-  createPhysiscalClient = (clienteFisico) => {
-    console.log(clienteFisico)
+  loadPhysicalClients = () => {
+    this.physicalClientService.getPhysiscalClients().then(response => {
+      this.pessoasFisicas = response.data;
+      console.log(response.data)
+    })
   }
 
-
+  
 }
 
-physicalClientController['$inject'] = [
+
+physicalClientCreateController['$inject'] = [
   '$scope',
   '$state',
   '$interval',
+  // 'physicalClientService',
 ]
 
-
-export default physicalClientController;
+export default physicalClientCreateController;

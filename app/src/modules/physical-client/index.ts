@@ -6,10 +6,19 @@ import PhysicalClienteCreateController from './physical-client-create/physical-c
 import physicalClientConsultTemplate from './physical-client-consult/physical-cliente-consult.html'
 import PhysicalClienteConsultController from './physical-client-consult/physical-cliente-consult'
 
+import physicalClientUpdeteTemplate from './physical-client-update/physical-client-update.html'
+import PhysicalClienteUpdeteController from './physical-client-update/physical-client-update'
+
+import physicalClientDeleteTemplate from './physical-cliente-delete/physical-cliente-delete.html'
+import PhysicalClienteDeleteController from './physical-cliente-delete/physical-cliente-delete'
+
+
+import physicalClientService from '../physical-client/service/physical-cliente-service'
+
 // import AccountService from ''
 
 const physicalClientModule = angular.module('app.physicalClient', [])
-  // .service('accountService', AccountService)
+  .service('physicalClientService', physicalClientService)
   .config(['$stateProvider', ($stateProvider) => {
     // console.log($routeParams)
     $stateProvider
@@ -27,6 +36,18 @@ const physicalClientModule = angular.module('app.physicalClient', [])
         url: '/consult',
         templateUrl: physicalClientConsultTemplate,
         controller: PhysicalClienteConsultController,
+        controllerAs: '$ctrl',
+      })
+      .state('app.physicalClient.update', {
+        url: '/update',
+        templateUrl: physicalClientUpdeteTemplate,
+        controller: PhysicalClienteUpdeteController,
+        controllerAs: '$ctrl',
+      })
+      .state('app.physicalClient.delete', {
+        url: '/delete',
+        templateUrl: physicalClientDeleteTemplate,
+        controller: PhysicalClienteDeleteController,
         controllerAs: '$ctrl',
       })
 

@@ -1,6 +1,6 @@
 import './physical-cliente-create.scss'
 
-class physicalClientController {
+class physicalClientCreateController {
 
   constructor(
     public $scope,
@@ -15,11 +15,11 @@ class physicalClientController {
 
 }
 
-physicalClientController['$inject'] = [
+physicalClientCreateController['$inject'] = [
   '$scope',
   '$state',
   '$interval',
 ]
 
 
-export default physicalClientController;
+export default physicalClientCreateController;

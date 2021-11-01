@@ -1,6 +1,6 @@
 import './legal-cliente-create.scss'
 
-class legalClientController {
+class legalClientCreateController {
 
   constructor(
     public $scope,
@@ -15,11 +15,11 @@ class legalClientController {
 
 }
 
-legalClientController['$inject'] = [
+legalClientCreateController['$inject'] = [
   '$scope',
   '$state',
   '$interval',
 ]
 
 
-export default legalClientController;
+export default legalClientCreateController;

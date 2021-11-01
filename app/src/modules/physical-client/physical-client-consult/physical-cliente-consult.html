@@ -1,41 +1,36 @@
 <div class="jumbotron">
   <div class="row">
     <div class="col-12">
-      <h4>Consulta de cadastros</h4>
+      <h1 class="display-4">Consulta de cadastros de pessoas fisica</h1>
+      <p class="lead">Nessa tela será mostrado uma lista os dados de pessoas fisicas cadastradas</p>
+      <hr class="my-4">
     </div>
+  
+    
   </div>
-
   <table class="table">
     <thead class="thead-dark">
       <tr>
-        <th scope="col">Conta</th>
-        <th scope="col">Agencia</th>
+        <th scope="col">ID do cadastro</th>
         <th scope="col">Nome do cliente</th>
         <th scope="col">CPF </th>
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <th scope="row">1</th>
-        <td>Mark</td>
-        <td>Otto</td>
-        <td>@mdo</td>
-      </tr>
-      <tr>
-        <th scope="row">2</th>
-        <td>Jacob</td>
-        <td>Thornton</td>
-        <td>@fat</td>
-      </tr>
-      <tr>
-        <th scope="row">3</th>
-        <td>Larry</td>
-        <td>the Bird</td>
-        <td>@twitter</td>
+      <tr ng-repeat="pessoaFisica in pessoasFisicas">
+        
+        <th scope="row">{{pessoaFisica.id}}</th>
+        <td>{{pessoaFisica.nome}}</td>
+        <td>{{pessoaFisica.cpf}}</td>
       </tr>
     </tbody>
   </table>
   
+  <hr class="my-4">
+
+  <p class="lead">
+    <a class="btn btn-primary btn-lg" href="/" role="button">Voltar para o menu</a>
+  </p>
 
   
 </div>
