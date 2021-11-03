@@ -1,26 +1,26 @@
-class physicalClientService{
+class physicalClientService {
 
-    constructor(
-      public $scope,
-      public $state,
-      public $http
-    ) { }
+  constructor(
+    public $state,
+    public $http
+  ) { }
 
-    getPhysicalClient(){
-      return this.$http.get("http://localhost:8081/pessoas-fisicas")
-    }
-  
-    postPhysicalClient(){
-      return this.$http.post("http://localhost:8081/pessoas-fisicas")
-    }
-    
+  getPhysicalClient() {
+    return this.$http.get("http://localhost:8081/pessoas-fisicas")
   }
 
-  physicalClientService['$inject'] = [
-    '$scope',
-    '$state',
-    '$http'  
-  ]
-  
-  
-  export default physicalClientService; 
+  postPhysicalClient(pessoaFisica) {
+    return this.$http.post("http://localhost:8081/pessoas-fisicas", pessoaFisica)
+  }
+
+  deletePhysicalCliente(pessoaFisicaID ){
+    return this.$http.delete("http://localhost:8081/pessoas-fisicas/" + pessoaFisicaID )
+  }
+}
+
+physicalClientService['$inject'] = [
+  '$state',
+  '$http'
+]
+
+export default physicalClientService;

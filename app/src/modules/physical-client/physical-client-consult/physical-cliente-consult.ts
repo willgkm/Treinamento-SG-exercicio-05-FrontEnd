@@ -4,7 +4,7 @@ import './physical-cliente-consult.scss'
 class physicalClientCreateController {
   
 
-  private pessoasFisicas: object[] = [
+  private pessoasFisicas: [] = [
 
   ]
 
@@ -15,22 +15,24 @@ class physicalClientCreateController {
     public physicalClientService,
   ) { }
 
-  loadPhysicalClients = () => {
-    this.physicalClientService.getPhysiscalClients().then(response => {
-      this.pessoasFisicas = response.data;
-      console.log(response.data)
-    })
+  $onInit = () => {
+    this.loadPhysicalClients()
+    console.log(this.pessoasFisicas)
   }
 
-  
+  loadPhysicalClients = () => {
+    this.physicalClientService.getPhysicalClient().then(response => {
+      this.pessoasFisicas = response.data;
+      console.log(this.pessoasFisicas)
+    })
+  }
 }
-
 
 physicalClientCreateController['$inject'] = [
   '$scope',
   '$state',
   '$interval',
-  // 'physicalClientService',
+  'physicalClientService',
 ]
 
 export default physicalClientCreateController;

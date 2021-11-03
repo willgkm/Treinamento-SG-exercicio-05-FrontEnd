@@ -6,10 +6,15 @@ class physicalClientCreateController {
     public $scope,
     public $state,
     public $interval,
+    public physicalClientService,
   ) { }
 
   createPhysiscalClient = (clienteFisico) => {
-    console.log(clienteFisico)
+    this.physicalClientService.postPhysicalClient(clienteFisico).then( () => {
+      delete this.$scope.clienteFisico;
+      this.$scope.clienteFisicoForm.$setPristine();
+      alert('cliente fisico criado com sucesso!!!')
+    })
   }
 
 
@@ -19,6 +24,7 @@ physicalClientCreateController['$inject'] = [
   '$scope',
   '$state',
   '$interval',
+  'physicalClientService'
 ]
 
 

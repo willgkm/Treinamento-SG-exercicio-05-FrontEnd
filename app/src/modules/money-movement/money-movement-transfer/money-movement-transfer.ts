@@ -6,11 +6,17 @@ class moneyMovementDepositController {
     public $scope,
     public $state,
     public $interval,
+    public moneyMovementService,
   ) { }
 
-  // createLegalAccount = (contaJuridica) => {
-  //   console.log(contaJuridica)
-  // }
+  onTransfer = (transferencia) => {
+
+    this.moneyMovementService.transfer(transferencia).then( () => {
+      delete this.$scope.transferencia;
+      this.$scope.transferenciaForm.$setPristine();
+      alert('Transferencia realizado com sucesso!!!')
+    })
+  } 
 
 }
 
@@ -18,6 +24,7 @@ moneyMovementDepositController['$inject'] = [
   '$scope',
   '$state',
   '$interval',
+  'moneyMovementService'
 ]
 
 export default moneyMovementDepositController;

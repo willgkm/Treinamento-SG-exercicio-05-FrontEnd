@@ -12,15 +12,11 @@ import PhysicalClienteUpdeteController from './physical-client-update/physical-c
 import physicalClientDeleteTemplate from './physical-cliente-delete/physical-cliente-delete.html'
 import PhysicalClienteDeleteController from './physical-cliente-delete/physical-cliente-delete'
 
-
 import physicalClientService from '../physical-client/service/physical-cliente-service'
-
-// import AccountService from ''
 
 const physicalClientModule = angular.module('app.physicalClient', [])
   .service('physicalClientService', physicalClientService)
   .config(['$stateProvider', ($stateProvider) => {
-    // console.log($routeParams)
     $stateProvider
       .state('app.physicalClient', {
         url: '^/physical-cliente',

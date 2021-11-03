@@ -7,14 +7,14 @@
     </div>  
 
 
-  <form name="saqueForm">
+  <form name="transferenciaForm">
     <div class="container">
-      <input class="form-control" type="text" ng-model="transferencia.idEnviar"
+      <input class="form-control form-control-lg" type="number" ng-model="transferencia.idEnviar"
         placeholder="Informe o ID da conta que irá enviar o dinheiro..." ng-required="true">
-      <input class="form-control" type="text" ng-model="transferencia.idReceber"
+      <input class="form-control form-control-lg" type="number" ng-model="transferencia.idReceber"
         placeholder="Informe o ID da conta que irá receber o dinheiro..." ng-required="true">
 
-      <input class="form-control" type="number" ng-model="transferencia.valor"
+      <input class="form-control form-control-lg" type="number" ng-model="transferencia.valor"
         placeholder="Informe o valor do transferencia" ng-required="true">
 
   </form>
@@ -22,6 +22,6 @@
   <hr class="my-4">
   <p>Certifiquece de conferir a conta que irá ser realizada o transferencia</p>
   <p class="lead">
-    <a class="btn btn-primary btn-lg" role="button">Transferir</a>
+    <button class="btn btn-primary btn-lg" role="button" ng-click="$ctrl.onTransfer(transferencia)" >Transferir</button>
   </p>
 </div>

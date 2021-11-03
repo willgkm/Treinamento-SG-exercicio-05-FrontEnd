@@ -20,11 +20,11 @@
 			</tr>
 		</thead>
 		<tbody>
-			<tr>
-				<th scope="row">1</th>
-				<td>Mark</td>
-				<td>Otto</td>
-				<td>@mdo</td>
+			<tr ng-repeat="contaFisica in $ctrl.contasFisicas">
+				<th >{{contaFisica.id}}</th>
+				<td>{{contaFisica.agencia}}</td>
+				<td>{{contaFisica.clienteFisico.nome}}</td>
+				<td>{{contaFisica.clienteFisico.cpf}}</td>
 			</tr>
 		</tbody>
 	</table>

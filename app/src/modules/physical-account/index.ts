@@ -12,10 +12,10 @@ import physicalAccountUpdateController from './physical-account-update/physical-
 import physicalAccountDeleteTemplate from './physical-account-delete/physical-account-delete.html'
 import physicalAccountDeleteController from './physical-account-delete/physical-account-delete'
 
-// import AccountService from ''
+import physicalAccountService from './service/physical-account-service'
 
 const physicalAccountModule = angular.module('app.physicalAccount', [])
-  // .service('accountService', AccountService)
+  .service('physicalAccountService', physicalAccountService)
   .config(['$stateProvider', ($stateProvider) => {
     // console.log($routeParams)
     $stateProvider

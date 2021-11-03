@@ -9,9 +9,14 @@ import moneyMovementTakeoffController from './money-movement-takeoff/money-movem
 import moneyMovementTransferTemplete from './money-movement-transfer/money-movement-transfer.html'
 import moneyMovementTransferController from './money-movement-transfer/money-movement-transfer'
 
+import moneyMovementStatementTemplete from './money-movement-statement/money-movement-statement.html'
+import moneyMovementStatementController from './money-movement-statement/money-movement-statement'
+
+
+import moneyMovementService from './service/money-movement-service'
 
 const depositModule = angular.module('app.moneyMovement', [])
-  // .service('accountService', AccountService)
+  .service('moneyMovementService', moneyMovementService)
   .config(['$stateProvider', ($stateProvider) => {
     // console.log($routeParams)
     $stateProvider
@@ -35,6 +40,12 @@ const depositModule = angular.module('app.moneyMovement', [])
         url: '/transfer',
         templateUrl: moneyMovementTransferTemplete,
         controller: moneyMovementTransferController,
+        controllerAs: '$ctrl',
+      })
+      .state('app.moneyMovement.statement', {
+        url: '/statement',
+        templateUrl: moneyMovementStatementTemplete,
+        controller: moneyMovementStatementController,
         controllerAs: '$ctrl',
       })
 
