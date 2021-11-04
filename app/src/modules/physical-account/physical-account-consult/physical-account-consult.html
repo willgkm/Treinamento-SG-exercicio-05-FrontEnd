@@ -21,7 +21,7 @@
 		</thead>
 		<tbody>
 			<tr ng-repeat="contaFisica in $ctrl.contasFisicas">
-				<th >{{contaFisica.id}}</th>
+				<th><a class="corDoLink" ng-click="$ctrl.open()">{{contaFisica.id}}</a></th>
 				<td>{{contaFisica.agencia}}</td>
 				<td>{{contaFisica.clienteFisico.nome}}</td>
 				<td>{{contaFisica.clienteFisico.cpf}}</td>

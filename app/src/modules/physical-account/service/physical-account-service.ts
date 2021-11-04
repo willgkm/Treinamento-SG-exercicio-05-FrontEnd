@@ -20,6 +20,9 @@ class physicalAccountService {
 	deletePhysicalAccount(contaFisicaId) {
 		return this.$http.delete("http://localhost:8081/contas-fisicas/desativar/" + contaFisicaId)
 	}
+	getPhysicalAccountDetail(contaFisicaId){
+		return this.$http.get("http://localhost:8081/movimentacao/saldo-da-conta/" + contaFisicaId)
+	}
 
 }
 
