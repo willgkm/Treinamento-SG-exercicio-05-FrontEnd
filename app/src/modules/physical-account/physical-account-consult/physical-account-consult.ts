@@ -14,13 +14,11 @@ class physiscalAccountConsultController {
   
   $onInit = () => {
     this.loadPhysicalAccounts()
-    console.log(this.contasFisicas)
   }
 
   loadPhysicalAccounts = () => {
     this.physicalAccountService.getPhysicalAccount().then(response => {
       this.contasFisicas = response.data;
-      console.log(this.contasFisicas)
     })
   }
 

@@ -9,7 +9,6 @@ class physiscalAccountCreateController {
   ) { }
 
   createSavingAccount = (contaFisica) => {
-    console.log(contaFisica)
   }
 
 

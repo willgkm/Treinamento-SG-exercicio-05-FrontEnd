@@ -6,9 +6,7 @@ import LegalClienteController from './legal-client-create/legal-cliente-create'
 // import AccountService from ''
 
 const legalClientModule = angular.module('app.legalClient', [])
-  // .service('accountService', AccountService)
   .config(['$stateProvider', ($stateProvider) => {
-    // console.log($routeParams)
     $stateProvider
       .state('app.legalClient', {
         url: '^/legal-cliente',

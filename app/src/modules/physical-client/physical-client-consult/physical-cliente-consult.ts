@@ -17,13 +17,11 @@ class physicalClientCreateController {
 
   $onInit = () => {
     this.loadPhysicalClients()
-    console.log(this.pessoasFisicas)
   }
 
   loadPhysicalClients = () => {
     this.physicalClientService.getPhysicalClient().then(response => {
       this.pessoasFisicas = response.data;
-      console.log(this.pessoasFisicas)
     })
   }
 }

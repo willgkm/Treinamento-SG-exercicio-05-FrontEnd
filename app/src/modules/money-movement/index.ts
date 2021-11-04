@@ -18,7 +18,6 @@ import moneyMovementService from './service/money-movement-service'
 const depositModule = angular.module('app.moneyMovement', [])
   .service('moneyMovementService', moneyMovementService)
   .config(['$stateProvider', ($stateProvider) => {
-    // console.log($routeParams)
     $stateProvider
       .state('app.moneyMovement', {
         url: '^/money-movement',

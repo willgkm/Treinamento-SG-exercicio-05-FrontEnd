@@ -16,6 +16,11 @@ class physicalClientService {
   deletePhysicalCliente(pessoaFisicaID ){
     return this.$http.delete("http://localhost:8081/pessoas-fisicas/" + pessoaFisicaID )
   }
+
+  alterPhysicalCliente(pessoaFisica) {
+    return this.$http.put("http://localhost:8081/pessoas-fisicas" , pessoaFisica)
+  }
+
 }
 
 physicalClientService['$inject'] = [

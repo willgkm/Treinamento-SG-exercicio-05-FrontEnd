@@ -13,15 +13,9 @@ class moneyMovementTakeoffController {
     public moneyMovementService,
   ) { }
   
-  $onInit = () => {
-    console.log(this.extrato)
-  }
-
   LoadStatement = (ExtratoDTO) => {
-    console.log(ExtratoDTO);
     this.moneyMovementService.statement(ExtratoDTO).then(response => {
       this.extrato = response.data;
-      console.log(this.extrato);
         
       
     })

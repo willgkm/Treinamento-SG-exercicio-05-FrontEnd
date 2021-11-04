@@ -16,7 +16,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr ng-repeat="pessoaFisica in $ctrl.pessoasFisicas">
+      <tr ng-repeat="pessoaFisica in $ctrl.pessoasFisicas | orderBy:'id' ">
 
         <th scope="row">{{pessoaFisica.id}}</th>
         <td>{{pessoaFisica.nome}}</td>

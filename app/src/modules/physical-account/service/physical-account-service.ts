@@ -13,6 +13,14 @@ class physicalAccountService {
 		return this.$http.post("http://localhost:8081/contas-fisicas/cadastrar", contaFisica)
 	}
 
+	alterPhysicalAccount(alterContaFisica) {
+		return this.$http.put("http://localhost:8081/contas-fisicas/alterar", alterContaFisica)
+	}
+
+	deletePhysicalAccount(contaFisicaId) {
+		return this.$http.delete("http://localhost:8081/contas-fisicas/desativar/" + contaFisicaId)
+	}
+
 }
 
 physicalAccountService['$inject'] = [
